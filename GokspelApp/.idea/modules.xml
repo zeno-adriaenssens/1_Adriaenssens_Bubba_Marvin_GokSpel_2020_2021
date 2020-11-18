@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Groepswerk.iml" filepath="$PROJECT_DIR$/Groepswerk.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GokspelApp.iml" filepath="$PROJECT_DIR$/GokspelApp.iml" />
     </modules>
   </component>
 </project>
