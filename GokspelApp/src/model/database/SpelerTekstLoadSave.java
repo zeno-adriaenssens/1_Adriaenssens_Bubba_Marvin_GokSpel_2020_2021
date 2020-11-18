@@ -7,7 +7,7 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class MemorySpelerDatabase {
+public class SpelerTekstLoadSave {
 
     public void saveSpelersTxt(ArrayList<Speler> spelers) {
         try {

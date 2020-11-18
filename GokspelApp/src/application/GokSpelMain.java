@@ -2,14 +2,14 @@ package application;
 	
 import javafx.application.Application;
 import javafx.stage.Stage;
-import model.database.MemorySpelerDatabase;
+import model.database.SpelerTekstLoadSave;
 import view.AdminView;
 import view.GamblerView;
 
 public class GokSpelMain extends Application {
 	@Override
 	public void start(Stage primaryStage) {
-		MemorySpelerDatabase db = new MemorySpelerDatabase();
+		SpelerTekstLoadSave db = new SpelerTekstLoadSave();
 		AdminView adminView = new AdminView();
 		GamblerView gamblerView = new GamblerView();
 	}
