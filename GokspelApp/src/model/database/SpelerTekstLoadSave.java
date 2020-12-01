@@ -30,19 +30,12 @@ public class SpelerTekstLoadSave extends TekstLoadSaveTemplate {
             Scanner scanner = new Scanner(new File("src\\bestanden\\speler.txt"));
             scanner.useDelimiter("[,\n]");
             while (scanner.hasNextLine()) {
-                String familienaam = scanner.next();
-                String voornaam = scanner.next();
-                String spelernaam = scanner.next();
-                String goksaldo = scanner.next();
 
-
-                Speler speler = new Speler(familienaam, voornaam, spelernaam, Double.valueOf(goksaldo));
-                System.out.println(speler.toString());
-
-                spelers.add(speler);
+                spelers.add(new Speler(scanner.next(), scanner.next(), scanner.next(), Double.parseDouble(scanner.next())));
             }
 
             scanner.close();
+            System.out.println(spelers);
             return spelers;
         }
         catch (Exception e) {
