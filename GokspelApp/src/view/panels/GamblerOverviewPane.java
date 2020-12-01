@@ -20,17 +20,18 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import model.Speler;
 import model.database.SpelerTekstLoadSave;
+import model.database.TekstLoadSaveTemplate;
 import view.AdminMainPane;
 
 import javax.swing.*;
 
 
 public class GamblerOverviewPane extends GridPane{
-	private SpelerTekstLoadSave db;
+	private TekstLoadSaveTemplate db;
 	private ObservableList<Speler> spelers;
 
 	
-	public GamblerOverviewPane(SpelerTekstLoadSave db) {
+	public GamblerOverviewPane(TekstLoadSaveTemplate db) {
 		this.db = db;
 		refresh();
 
@@ -48,6 +49,6 @@ public class GamblerOverviewPane extends GridPane{
 	}
 
 	public void refresh(){
-		spelers = FXCollections.observableArrayList(db.loadSpelersTxt());
+		spelers = FXCollections.observableArrayList(db.loadSpelers());
 	}
 }

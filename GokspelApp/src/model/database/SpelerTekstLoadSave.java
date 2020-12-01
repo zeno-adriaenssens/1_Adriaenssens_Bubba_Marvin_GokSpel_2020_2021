@@ -7,9 +7,10 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class SpelerTekstLoadSave {
+public class SpelerTekstLoadSave extends TekstLoadSaveTemplate {
 
-    public void saveSpelersTxt(ArrayList<Speler> spelers) {
+    @Override
+    public void saveSpelers(ArrayList<Speler> spelers) {
         try {
             PrintWriter printWriter = new PrintWriter(new File("src\\bestanden\\speler.txt"));
             for (Speler product : spelers) {
@@ -22,7 +23,8 @@ public class SpelerTekstLoadSave {
         }
     }
 
-    public ArrayList<Speler> loadSpelersTxt() {
+    @Override
+    public ArrayList<Speler> loadSpelers() {
         try {
             ArrayList<Speler> spelers = new ArrayList<>();
             Scanner scanner = new Scanner(new File("src\\bestanden\\speler.txt"));
