@@ -1,14 +1,12 @@
 package model.database;
 
-import jxl.read.biff.BiffException;
-import jxl.write.WriteException;
-import model.Speler;
 
-import java.io.IOException;
+import model.Speler;
+import model.Strategies.LoadSafeStrategies;
+
 import java.util.ArrayList;
 
-public abstract class XlsLoadSaveTemplate {
-    //word niet gebruikt, waarom mag k ni gewoon 1 interface gebruiken?
-    public abstract void saveSpelers(ArrayList<Speler> spelers) throws WriteException, IOException, BiffException;
+public abstract class XlsLoadSaveTemplate implements LoadSafeStrategies {
+    public abstract void saveSpelers(ArrayList<Speler> spelers);
     public abstract ArrayList<Speler> loadSpelers();
 }

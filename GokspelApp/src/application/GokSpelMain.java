@@ -2,6 +2,7 @@ package application;
 	
 import javafx.application.Application;
 import javafx.stage.Stage;
+import model.Strategies.LoadSafeStrategies;
 import model.database.SpelerTekstLoadSave;
 import model.database.SpelerXlsLoadSave;
 import model.database.TekstLoadSaveTemplate;
@@ -15,7 +16,7 @@ public class GokSpelMain extends Application {
 
 	@Override
 	public void start(Stage primaryStage) {
-		TekstLoadSaveTemplate db = new SpelerXlsLoadSave();
+		LoadSafeStrategies db = new SpelerTekstLoadSave();
 		AdminView adminView = new AdminView(db);
 		GamblerView gamblerView = new GamblerView();
 	}

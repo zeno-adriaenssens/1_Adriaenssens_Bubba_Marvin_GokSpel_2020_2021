@@ -8,14 +8,15 @@ import javafx.scene.control.TableView;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import model.Strategies.LoadSafeStrategies;
 import model.database.SpelerTekstLoadSave;
 import model.database.TekstLoadSaveTemplate;
 
 public class AdminView {
 	private Stage stage = new Stage();
-	private TekstLoadSaveTemplate db;
+	private LoadSafeStrategies db;
 
-	public AdminView(TekstLoadSaveTemplate db){
+	public AdminView(LoadSafeStrategies db){
 		this.db = db;
 		stage.setTitle("ADMIN VIEW");
 		stage.initStyle(StageStyle.UTILITY);

@@ -6,7 +6,7 @@ import model.Speler;
 import java.io.File;
 import java.util.ArrayList;
 
-public class SpelerXlsLoadSave extends TekstLoadSaveTemplate{
+public class SpelerXlsLoadSave extends XlsLoadSaveTemplate{
     @Override
     public void saveSpelers(ArrayList<Speler> spelers) {
         try{
@@ -35,7 +35,6 @@ public class SpelerXlsLoadSave extends TekstLoadSaveTemplate{
             for (ArrayList<String> s: args) {
                 spelers.add(new Speler(s.get(0), s.get(1), s.get(2), Double.parseDouble(s.get(3))));
             }
-            System.out.println(spelers);
             return spelers;
         } catch (Exception e) {
             throw new IllegalArgumentException(e.getMessage());

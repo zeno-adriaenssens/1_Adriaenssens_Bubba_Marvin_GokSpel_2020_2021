@@ -1,11 +1,9 @@
-package model.database;
+package model.Strategies;
 
 import model.Speler;
-import model.Strategies.LoadSafeStrategies;
-
 import java.util.ArrayList;
 
-public abstract class TekstLoadSaveTemplate implements LoadSafeStrategies {
+public interface LoadSafeStrategies {
     public abstract void saveSpelers(ArrayList<Speler> spelers);
     public abstract ArrayList<Speler> loadSpelers();
 }

@@ -19,6 +19,7 @@ import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import model.Speler;
+import model.Strategies.LoadSafeStrategies;
 import model.database.SpelerTekstLoadSave;
 import model.database.TekstLoadSaveTemplate;
 import view.AdminMainPane;
@@ -27,11 +28,11 @@ import javax.swing.*;
 
 
 public class GamblerOverviewPane extends GridPane{
-	private TekstLoadSaveTemplate db;
+	private LoadSafeStrategies db;
 	private ObservableList<Speler> spelers;
 
 	
-	public GamblerOverviewPane(TekstLoadSaveTemplate db) {
+	public GamblerOverviewPane(LoadSafeStrategies db) {
 		this.db = db;
 		refresh();
 
@@ -50,5 +51,10 @@ public class GamblerOverviewPane extends GridPane{
 
 	public void refresh(){
 		spelers = FXCollections.observableArrayList(db.loadSpelers());
+		System.out.println("===========================================================================================================================");
+		System.out.println("Load/Refresh of players");
+		for (Speler s: spelers) {
+			System.out.println(s.toString());
+		}
 	}
 }

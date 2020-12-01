@@ -35,7 +35,6 @@ public class SpelerTekstLoadSave extends TekstLoadSaveTemplate {
             }
 
             scanner.close();
-            System.out.println(spelers);
             return spelers;
         }
         catch (Exception e) {
