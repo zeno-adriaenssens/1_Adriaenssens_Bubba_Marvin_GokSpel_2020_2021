@@ -8,10 +8,13 @@ import model.database.LoadSaveFactory;
 import java.util.ArrayList;
 
 public class Spel implements Observable{
-    ArrayList<Observer> observers = new ArrayList<>();
+    private ArrayList<Observer> observers = new ArrayList<>();
+    private LoadSaveStrategies db;
+    private Speler speler;
+
 
     public Spel() {
-        LoadSaveStrategies db = LoadSaveFactory.createStrategy("XLS");
+        db = LoadSaveFactory.createStrategy("XLS");
         AdminViewController adminView = new AdminViewController(db);
         GamblerViewController gamblerView = new GamblerViewController();
     }
@@ -31,5 +34,23 @@ public class Spel implements Observable{
         for (Observer observer: observers) {
             observer.update(string);
         }
+    }
+
+    private void setSpeler(String speler) {
+        Speler s = db.find(speler);
+        if (s == null) {
+            throw new IllegalArgumentException("Speler niet gevonden");
+        } else {
+            this.speler = s;
+            notifyObservers(speler);
+        }
+    }
+
+    public Speler getSpeler() {
+        return speler;
+    }
+
+    public void save() {
+        db.saveSpelers(db.loadSpelers());
     }
 }

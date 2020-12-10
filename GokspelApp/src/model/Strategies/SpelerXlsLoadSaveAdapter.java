@@ -20,4 +20,9 @@ public class SpelerXlsLoadSaveAdapter implements LoadSaveStrategies{
     public ArrayList<Speler> loadSpelers() {
         return loadSave.loadSpelers();
     }
+
+    @Override
+    public Speler find(String naam) {
+        return loadSave.find(naam);
+    }
 }

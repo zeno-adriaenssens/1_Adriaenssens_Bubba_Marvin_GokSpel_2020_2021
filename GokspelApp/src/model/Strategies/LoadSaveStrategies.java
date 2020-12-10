@@ -7,4 +7,5 @@ import java.util.ArrayList;
 public interface LoadSaveStrategies {
     public abstract void saveSpelers(ArrayList<Speler> spelers);
     public abstract ArrayList<Speler> loadSpelers();
+    public Speler find(String naam);
 }

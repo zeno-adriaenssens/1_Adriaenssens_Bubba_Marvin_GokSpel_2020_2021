@@ -38,4 +38,14 @@ public class SpelerXlsLoadSave{
             throw new IllegalArgumentException(e.getMessage());
         }
     }
+
+    public Speler find(String naam) {
+        ArrayList<Speler> spelers = loadSpelers();
+        for (Speler speler:spelers) {
+            if (speler.getSpelernaam().equals(naam)){
+                return speler;
+            }
+        }
+        throw new IllegalArgumentException("speler not found");
+    }
 }
