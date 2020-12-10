@@ -1,2 +1,1 @@
 SpelerTekstLoadSave & SpelerXmsLoadSave gebruiken geen relatief pad
-een adapter classe maken voor SpelerXmsLoadSave (useless but sure fox)

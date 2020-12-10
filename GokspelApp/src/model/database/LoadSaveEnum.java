@@ -2,7 +2,7 @@ package model.database;
 
 public enum LoadSaveEnum {
     TEKST ("model.Strategies.SpelerTekstLoadSave"),
-    XLS ("model.Strategies.SpelerXlsLoadSave");
+    XLS ("model.Strategies.SpelerXlsLoadSaveAdapter");
 
     private final String klasseNaam;
 

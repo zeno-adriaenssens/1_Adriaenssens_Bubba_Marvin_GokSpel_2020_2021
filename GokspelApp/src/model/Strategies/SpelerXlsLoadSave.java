@@ -6,8 +6,7 @@ import model.Speler;
 import java.io.File;
 import java.util.ArrayList;
 
-public class SpelerXlsLoadSave implements LoadSaveStrategies{
-    @Override
+public class SpelerXlsLoadSave{
     public void saveSpelers(ArrayList<Speler> spelers) {
         try{
             File file = new File("C:\\Users\\Zeno\\Desktop\\school\\UCLL\\2020-2021\\OOO\\Groepswerk\\1_Adriaenssens_Bubba_Marvin_GokSpel_2020_2021\\GokspelApp\\src\\bestanden\\speler.xls");
@@ -27,7 +26,6 @@ public class SpelerXlsLoadSave implements LoadSaveStrategies{
         }
     }
 
-    @Override
     public ArrayList<Speler> loadSpelers() {
         try {
             ArrayList<ArrayList<String>> args = new ExcelPlugin().read(new File("C:\\Users\\Zeno\\Desktop\\school\\UCLL\\2020-2021\\OOO\\Groepswerk\\1_Adriaenssens_Bubba_Marvin_GokSpel_2020_2021\\GokspelApp\\src\\bestanden\\speler.xls"));

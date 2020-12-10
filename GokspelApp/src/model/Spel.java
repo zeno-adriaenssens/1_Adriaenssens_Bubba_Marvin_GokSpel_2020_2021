@@ -11,7 +11,7 @@ public class Spel implements Observable{
     ArrayList<Observer> observers = new ArrayList<>();
 
     public Spel() {
-        LoadSaveStrategies db = LoadSaveFactory.createStrategy("TEKST");
+        LoadSaveStrategies db = LoadSaveFactory.createStrategy("XLS");
         AdminViewController adminView = new AdminViewController(db);
         GamblerViewController gamblerView = new GamblerViewController();
     }
