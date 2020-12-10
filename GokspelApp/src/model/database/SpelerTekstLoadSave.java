@@ -27,7 +27,7 @@ public class SpelerTekstLoadSave extends TekstLoadSaveTemplate {
     public ArrayList<Speler> loadSpelers() {
         try {
             ArrayList<Speler> spelers = new ArrayList<>();
-            Scanner scanner = new Scanner(new File("src\\bestanden\\speler.txt"));
+            Scanner scanner = new Scanner(new File("C:\\Users\\Zeno\\Desktop\\school\\UCLL\\2020-2021\\OOO\\Groepswerk\\1_Adriaenssens_Bubba_Marvin_GokSpel_2020_2021\\GokspelApp\\src\\bestanden\\speler.txt"));
             scanner.useDelimiter("[,\n]");
             while (scanner.hasNextLine()) {
 

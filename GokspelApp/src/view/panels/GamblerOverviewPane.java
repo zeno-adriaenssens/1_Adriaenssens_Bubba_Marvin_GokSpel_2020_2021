@@ -4,27 +4,11 @@ package view.panels;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.geometry.Insets;
-import javafx.scene.Group;
-import javafx.scene.Scene;
-import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
-import javafx.scene.layout.Pane;
-import javafx.scene.layout.VBox;
-import javafx.scene.text.Font;
-import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 import model.Speler;
 import model.Strategies.LoadSafeStrategies;
-import model.database.SpelerTekstLoadSave;
-import model.database.TekstLoadSaveTemplate;
 import view.AdminMainPane;
-
-import javax.swing.*;
 
 
 public class GamblerOverviewPane extends GridPane{

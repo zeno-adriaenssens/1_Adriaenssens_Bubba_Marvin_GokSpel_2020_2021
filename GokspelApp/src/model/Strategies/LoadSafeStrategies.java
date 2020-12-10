@@ -1,6 +1,7 @@
 package model.Strategies;
 
 import model.Speler;
+
 import java.util.ArrayList;
 
 public interface LoadSafeStrategies {

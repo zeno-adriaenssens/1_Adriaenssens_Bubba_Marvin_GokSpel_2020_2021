@@ -4,8 +4,6 @@ import javafx.application.Application;
 import javafx.stage.Stage;
 import model.Strategies.LoadSafeStrategies;
 import model.database.SpelerTekstLoadSave;
-import model.database.SpelerXlsLoadSave;
-import model.database.TekstLoadSaveTemplate;
 import view.AdminView;
 import view.GamblerView;
 
