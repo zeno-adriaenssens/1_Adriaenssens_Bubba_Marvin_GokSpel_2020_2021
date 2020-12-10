@@ -4,13 +4,11 @@ package view;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
 import javafx.scene.layout.BorderPane;
-import model.Strategies.LoadSafeStrategies;
-import model.database.SpelerTekstLoadSave;
-import model.database.TekstLoadSaveTemplate;
+import model.Strategies.LoadSaveStrategies;
 import view.panels.GamblerOverviewPane;
 
 public class AdminMainPane extends BorderPane {
-	public AdminMainPane(LoadSafeStrategies db){
+	public AdminMainPane(LoadSaveStrategies db){
 	    TabPane tabPane = new TabPane(); 	    
         Tab spelVerloopTab = new Tab("Spelverloop");
         GamblerOverviewPane gamblerOverviewPane = new GamblerOverviewPane(db);

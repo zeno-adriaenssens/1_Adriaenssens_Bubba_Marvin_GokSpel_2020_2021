@@ -7,16 +7,15 @@ import javafx.geometry.Insets;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 import model.Speler;
-import model.Strategies.LoadSafeStrategies;
-import view.AdminMainPane;
+import model.Strategies.LoadSaveStrategies;
 
 
 public class GamblerOverviewPane extends GridPane{
-	private LoadSafeStrategies db;
+	private LoadSaveStrategies db;
 	private ObservableList<Speler> spelers;
 
 	
-	public GamblerOverviewPane(LoadSafeStrategies db) {
+	public GamblerOverviewPane(LoadSaveStrategies db) {
 		this.db = db;
 		refresh();
 

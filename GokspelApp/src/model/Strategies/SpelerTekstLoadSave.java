@@ -1,4 +1,4 @@
-package model.database;
+package model.Strategies;
 
 import model.Speler;
 
@@ -12,7 +12,7 @@ public class SpelerTekstLoadSave extends TekstLoadSaveTemplate {
     @Override
     public void saveSpelers(ArrayList<Speler> spelers) {
         try {
-            PrintWriter printWriter = new PrintWriter(new File("src\\bestanden\\speler.txt"));
+            PrintWriter printWriter = new PrintWriter(new File("C:\\Users\\Zeno\\Desktop\\school\\UCLL\\2020-2021\\OOO\\Groepswerk\\1_Adriaenssens_Bubba_Marvin_GokSpel_2020_2021\\GokspelApp\\src\\bestanden\\speler.txt"));
             for (Speler product : spelers) {
                 printWriter.write(product.toString() + "\n");
             }

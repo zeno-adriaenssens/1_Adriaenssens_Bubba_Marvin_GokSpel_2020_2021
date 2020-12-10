@@ -1,22 +1,17 @@
 package view;
 
-import javafx.collections.FXCollections;
 import javafx.scene.Group;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.TableView;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import model.Strategies.LoadSafeStrategies;
-import model.database.SpelerTekstLoadSave;
-import model.database.TekstLoadSaveTemplate;
+import model.Strategies.LoadSaveStrategies;
 
 public class AdminView {
 	private Stage stage = new Stage();
-	private LoadSafeStrategies db;
+	private LoadSaveStrategies db;
 
-	public AdminView(LoadSafeStrategies db){
+	public AdminView(LoadSaveStrategies db){
 		this.db = db;
 		stage.setTitle("ADMIN VIEW");
 		stage.initStyle(StageStyle.UTILITY);

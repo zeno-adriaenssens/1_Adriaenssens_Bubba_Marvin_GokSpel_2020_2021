@@ -1,4 +1,4 @@
-package model.database;
+package model.Strategies;
 
 import excel.ExcelPlugin;
 import model.Speler;
@@ -10,7 +10,7 @@ public class SpelerXlsLoadSave extends XlsLoadSaveTemplate{
     @Override
     public void saveSpelers(ArrayList<Speler> spelers) {
         try{
-            File file = new File("src\\bestanden\\speler.xls");
+            File file = new File("C:\\Users\\Zeno\\Desktop\\school\\UCLL\\2020-2021\\OOO\\Groepswerk\\1_Adriaenssens_Bubba_Marvin_GokSpel_2020_2021\\GokspelApp\\src\\bestanden\\speler.xls");
             ArrayList<ArrayList<String>> args = new ArrayList<>();
             for (Speler s: spelers) {
                 /*ArrayList<String> speler = [s.getFamilienaam(),s.getVoornaam(),s.getSpelernaam(),String.valueOf(s.getGoksaldo());];*/
@@ -30,7 +30,7 @@ public class SpelerXlsLoadSave extends XlsLoadSaveTemplate{
     @Override
     public ArrayList<Speler> loadSpelers() {
         try {
-            ArrayList<ArrayList<String>> args = new ExcelPlugin().read(new File("src\\bestanden\\speler.xls"));
+            ArrayList<ArrayList<String>> args = new ExcelPlugin().read(new File("C:\\Users\\Zeno\\Desktop\\school\\UCLL\\2020-2021\\OOO\\Groepswerk\\1_Adriaenssens_Bubba_Marvin_GokSpel_2020_2021\\GokspelApp\\src\\bestanden\\speler.xls"));
             ArrayList<Speler> spelers = new ArrayList<>();
             for (ArrayList<String> s: args) {
                 spelers.add(new Speler(s.get(0), s.get(1), s.get(2), Double.parseDouble(s.get(3))));
