@@ -6,7 +6,7 @@ import model.Speler;
 import java.io.File;
 import java.util.ArrayList;
 
-public class SpelerXlsLoadSave extends XlsLoadSaveTemplate{
+public class SpelerXlsLoadSave implements LoadSaveStrategies{
     @Override
     public void saveSpelers(ArrayList<Speler> spelers) {
         try{

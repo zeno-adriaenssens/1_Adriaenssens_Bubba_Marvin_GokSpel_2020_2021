@@ -5,7 +5,7 @@ import model.Strategies.LoadSaveStrategies;
 import view.AdminView;
 
 public class AdminViewController implements Observer {
-    AdminView adminView;
+    private AdminView adminView;
 
     public AdminViewController(LoadSaveStrategies db) {
         adminView = new AdminView(db);

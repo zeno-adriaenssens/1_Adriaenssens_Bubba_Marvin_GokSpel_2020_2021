@@ -7,7 +7,7 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class SpelerTekstLoadSave extends TekstLoadSaveTemplate {
+public class SpelerTekstLoadSave implements LoadSaveStrategies {
 
     @Override
     public void saveSpelers(ArrayList<Speler> spelers) {

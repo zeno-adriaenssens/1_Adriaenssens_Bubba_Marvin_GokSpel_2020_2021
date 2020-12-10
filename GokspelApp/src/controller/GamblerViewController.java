@@ -4,7 +4,7 @@ import model.Observer;
 import view.GamblerView;
 
 public class GamblerViewController implements Observer {
-    GamblerView gamblerView;
+    private GamblerView gamblerView;
 
     public GamblerViewController() {
         this.gamblerView = new GamblerView();
