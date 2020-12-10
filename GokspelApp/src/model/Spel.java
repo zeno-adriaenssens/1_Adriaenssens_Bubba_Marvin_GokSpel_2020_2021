@@ -15,8 +15,6 @@ public class Spel implements Observable{
 
     public Spel() {
         db = LoadSaveFactory.createStrategy("XLS");
-        AdminViewController adminView = new AdminViewController(db);
-        GamblerViewController gamblerView = new GamblerViewController();
     }
 
     @Override
@@ -52,5 +50,9 @@ public class Spel implements Observable{
 
     public void save() {
         db.saveSpelers(db.loadSpelers());
+    }
+
+    public LoadSaveStrategies getDb() {
+        return this.db;
     }
 }

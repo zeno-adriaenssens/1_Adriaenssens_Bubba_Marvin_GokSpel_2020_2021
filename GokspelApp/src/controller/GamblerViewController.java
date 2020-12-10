@@ -1,13 +1,13 @@
 package controller;
 
 import model.Observer;
+import model.Spel;
 import view.GamblerView;
 
 public class GamblerViewController implements Observer {
-    private GamblerView gamblerView;
+    //private GamblerView gamblerView;
 
-    public GamblerViewController() {
-        this.gamblerView = new GamblerView();
+    public GamblerViewController(Spel spel) {
     }
 
     @Override
